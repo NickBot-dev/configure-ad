@@ -25,7 +25,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Login to the Domain Controller, also known as DC-1, and install Active Directory Domain Services. Promote as a DC: Setup a new forest as mydomain.com (can be anything). Restart and then log back into DC-1 as user: mydomain.com\labuser. 
+- Login to the Domain Controller Virtual Machine, also known as DC-1, and install Active Directory Domain Services. Promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser". 
 - Step 2
 - Step 3
 - Step 4
