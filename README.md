@@ -25,8 +25,8 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Configure Active Directory Users and Roles 
-- Step 2
+- Install Active Directory
+- Create a Domain Admin user within the domain
 - Step 3
 - Step 4
 
@@ -34,11 +34,11 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <p>
 
-  ![add roles and features](https://github.com/user-attachments/assets/e304d5ee-fce9-4b9d-b7e8-e148696c921e) ![Install ADDS](https://github.com/user-attachments/assets/2543fd29-1010-4c59-8785-7fe548d6ad00) ![create jane doe](https://github.com/user-attachments/assets/e569c882-03b4-49c7-860c-12be9a17ec4f) ![jane as domain admins](https://github.com/user-attachments/assets/c672bf92-f306-4bf9-953e-9929bae79753)
-
+  ![add roles and features](https://github.com/user-attachments/assets/e304d5ee-fce9-4b9d-b7e8-e148696c921e) ![Install ADDS](https://github.com/user-attachments/assets/2543fd29-1010-4c59-8785-7fe548d6ad00) 
+  
 </p>
 <p>
-From the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. Next, promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser". Create a Domain Admin user within the Domain— In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES”. Create another OU named “_ADMINS”. Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to DC-1 and log back in as “mydomain.com\jane_admin”. Use "jane_admin" as main account for the Domain Controller.   
+From the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. Next, promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser".
 </p>
 <br />
 
