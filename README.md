@@ -37,21 +37,21 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <p>
 
-  ![add roles and features](https://github.com/user-attachments/assets/e304d5ee-fce9-4b9d-b7e8-e148696c921e) ![Install ADDS](https://github.com/user-attachments/assets/2543fd29-1010-4c59-8785-7fe548d6ad00) 
+![add roles and features](https://github.com/user-attachments/assets/e304d5ee-fce9-4b9d-b7e8-e148696c921e) ![Install ADDS](https://github.com/user-attachments/assets/2543fd29-1010-4c59-8785-7fe548d6ad00) 
   
 </p>
 <p>
- Installing Active Directory, from the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. Next, promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser".
+Installing Active Directory, from the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. Next, promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser".
 </p>
 <br />
 
 <p>
 
-  ![create jane doe](https://github.com/user-attachments/assets/4f8eb0fc-d6f2-4943-908b-75a7082cb274) ![jane as domain admins](https://github.com/user-attachments/assets/872a2324-fcd9-439b-9f58-cac5cb5258c4)
+![create jane doe](https://github.com/user-attachments/assets/4f8eb0fc-d6f2-4943-908b-75a7082cb274) ![jane as domain admins](https://github.com/user-attachments/assets/872a2324-fcd9-439b-9f58-cac5cb5258c4)
 
 </p>
 <p>
- Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to DC-1 and log back in as “mydomain.com\jane_admin”. Use "jane_admin" as main account for the Domain Controller.   
+Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to DC-1 and log back in as “mydomain.com\jane_admin”. Use "jane_admin" as main account for the Domain Controller.   
 </p>
 <br />
 
@@ -59,7 +59,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Joining Client-1 to the Domain, login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart). Login to the Domain Controller and verify Client-1 shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
 </p>
 <br />
 
