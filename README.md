@@ -86,3 +86,11 @@ Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the C
 Creating additional Non-Administrative users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts in the appropriate OU,　(_EMPLOYEES). Attempt to log into Client-1 with one of the new Non-Administrative accounts.  
 </p>
 <br />
+
+<p>
+
+</p>
+<p>
+words here  
+</p>
+<br />
