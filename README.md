@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+<h1>On-premises Active Directory Deployed in the Cloud (Microsoft Azure)</h1>
 This tutorial outlines the implementation of Active Directory within Azure Virtual Machines.<br />
 
 
@@ -13,10 +13,10 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Microsoft Azure (Virtual Machines)
+- Remote Desktop Connection
 - Active Directory Domain Services
-- PowerShell
+- PowerShell Ise
 
 <h2>Operating Systems Used </h2>
 
@@ -83,14 +83,16 @@ Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the C
 
 </p>
 <p>
-Creating additional Non-Administrative users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts in the appropriate OU,　(_EMPLOYEES). Attempt to log into Client-1 with one of the new Non-Administrative accounts.  
+Creating additional Non-Administrative users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts under "_EMPLOYEES". We now have the ability to login to the Client-1 VM as one of the new Non-Administrative accounts. Every Non-Administrative account has the same password.   
 </p>
 <br />
 
 <p>
 
+![viewing new users](https://github.com/user-attachments/assets/60b1ec57-935a-4f50-8ea3-ddb38d92d2f5)
+
 </p>
 <p>
-words here  
+Under the "_EMPOLYEES" tab, we can now see the newly created Non-Administrative accounts. This concludes the Deployment of Active Directory in the Cloud (Microsoft Azure)   
 </p>
 <br />
