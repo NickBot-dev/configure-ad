@@ -52,7 +52,7 @@ Installing Active Directory, from the Domain Controller Virtual Machine, also kn
 
 </p>
 <p>
-Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to DC-1 and log back in as “mydomain.com\jane_admin”. Use "jane_admin" as main account for the Domain Controller.   
+Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to the Domain Controller VM and log back in as “mydomain.com\jane_admin”. This would become the main Administrative Account for the Domain.    
 </p>
 <br />
 
