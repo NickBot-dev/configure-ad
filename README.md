@@ -58,7 +58,7 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 
 <p>
 
-![client-1 as part of the domain](https://github.com/user-attachments/assets/e3235c44-beeb-48bd-811c-ff7ef1b743b4) ![client-1 dragged into clients OU](https://github.com/user-attachments/assets/9ec8844f-e111-4f97-a302-086ef3b63152)
+![client-1 as part of the domain](https://github.com/user-attachments/assets/e3235c44-beeb-48bd-811c-ff7ef1b743b4) ![client-1 dragged into clients OU](https://github.com/user-attachments/assets/0ddbb558-9160-456e-9812-851093990baf)
 
 </p>
 <p>
