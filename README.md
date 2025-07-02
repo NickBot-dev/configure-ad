@@ -58,7 +58,7 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 
 <p>
 
-  ![client-1 as part of the domain](https://github.com/user-attachments/assets/e3235c44-beeb-48bd-811c-ff7ef1b743b4) ![client-1 dragged into clients OU](https://github.com/user-attachments/assets/9ec8844f-e111-4f97-a302-086ef3b63152)
+![client-1 as part of the domain](https://github.com/user-attachments/assets/e3235c44-beeb-48bd-811c-ff7ef1b743b4) ![client-1 dragged into clients OU](https://github.com/user-attachments/assets/9ec8844f-e111-4f97-a302-086ef3b63152)
 
 </p>
 <p>
@@ -67,10 +67,12 @@ Joining Client-1 to the Domain, login to Client-1 as the original local admin an
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![allowing domain users remote desktop](https://github.com/user-attachments/assets/3e956cd5-5294-4f8f-bd1c-f6b3cd4257fa)
+
 </p>
 <p>
-Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the Client-1 VM as mydomain.com\jane_admin. Open system properties, click “Remote Desktop”. Allow “domain users” access to remote desktop. You can now log into Client-1 VM as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
+Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the Client-1 VM as mydomain.com\jane_admin. Right click on the Start Menu and select "System", click “Remote Desktop” on the right of the screen, click "Select users that can remotely access this PC" and allow “Domain Users” access to remote desktop. You can now log into Client-1 VM as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
 
 </p>
 <br />
