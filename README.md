@@ -27,7 +27,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - Install Active Directory
 - Create a Domain Admin User within the Domain
-- Join Client-1 VM to the domain (mydomain.com)
+- Join Client-1 Virtual Machine (VM) to the domain (mydomain.com)
 - Setup Remote Desktop for non-administrative users on the Client-1 VM
 - Create additional users and attempt to log into client-1 VM with one of the new users
 
