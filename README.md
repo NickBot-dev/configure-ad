@@ -29,7 +29,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 - Create a Domain Admin User within the Domain
 - Join Client-1 Virtual Machine (VM) to the domain (mydomain.com)
 - Setup Remote Desktop for non-administrative users on the Client-1 VM
-- Create additional users and attempt to log into client-1 VM with one of the new users
+- Create additional Non-Administrative Users and attempt to log into Client-1 VM with one of the new users
 
 
 
@@ -78,9 +78,11 @@ Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the C
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![creating users in powershell](https://github.com/user-attachments/assets/682f42aa-8854-497f-ad40-626dcd6fddf2)
+
 </p>
 <p>
-Create additional normal users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts in the appropriate OU,　(_EMPLOYEES). Attempt to log into Client-1 with one of the new Non-Administrative accounts.  
+Creating additional Non-Administrative users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts in the appropriate OU,　(_EMPLOYEES). Attempt to log into Client-1 with one of the new Non-Administrative accounts.  
 </p>
 <br />
