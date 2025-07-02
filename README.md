@@ -57,10 +57,12 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![client-1 as part of the domain](https://github.com/user-attachments/assets/e3235c44-beeb-48bd-811c-ff7ef1b743b4) ![client-1 dragged into clients OU](https://github.com/user-attachments/assets/9ec8844f-e111-4f97-a302-086ef3b63152)
+
 </p>
 <p>
-Joining Client-1 to the Domain, login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart). Login to the Domain Controller and verify Client-1 shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
+Joining Client-1 to the Domain, login to Client-1 as the original local admin and join it to the domain by dragging , computer will restart. Login to the Domain Controller and verify Client-1 shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
 </p>
 <br />
 
