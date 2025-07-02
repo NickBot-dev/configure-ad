@@ -62,7 +62,7 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 
 </p>
 <p>
-Joining Client-1 to the Domain, login to Client-1 as the original local admin and join it to the domain by dragging , computer will restart. Login to the Domain Controller and verify Client-1 shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
+Joining Client-1 to the Domain, login to Client-1 as the original local admin and join it to the domain (computer will restart). Login to the Domain Controller VM and verify that Client-1 VM shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
 </p>
 <br />
 
