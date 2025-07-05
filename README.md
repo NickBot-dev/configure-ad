@@ -15,7 +15,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop Connection
-- Active Directory Domain Services
+- Microsoft Active Directory Domain Services
 - PowerShell Ise
 
 <h2>Operating Systems Used </h2>
@@ -27,9 +27,9 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - Install Active Directory
 - Create a Domain Admin User within the Domain
-- Join Client-1 Virtual Machine (VM) to the domain (mydomain.com)
-- Setup Remote Desktop for non-administrative users on the Client-1 VM
-- Create additional Non-Administrative Users and attempt to log into Client-1 VM with one of the new users
+- Join Client-1 Virtual Machine to the domain (mydomain.com)
+- Setup Remote Desktop for non-administrative users on the Client-1 Virtual Machine
+- Create additional Non-Administrative Users and attempt to log into Client-1 Virtual Machine with one of the new users
 
 
 
@@ -42,7 +42,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
   
 </p>
 <p>
-Installing Active Directory, from the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. In the third screenshot, select "Rename this PC (advanced)", Promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart and then log back into DC-1 as user: "mydomain.com\labuser".
+Installing Active Directory, from the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. In the third screenshot, select "Rename this PC (advanced)", Promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart the DC-1 Virtual Machine and then log back in as username: "mydomain.com\labuser".
 </p>
 <br />
 
@@ -52,7 +52,7 @@ Installing Active Directory, from the Domain Controller Virtual Machine, also kn
 
 </p>
 <p>
-Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out / close the connection to the Domain Controller VM and log back in as “mydomain.com\jane_admin”. This would become the main Administrative Account for the Domain.    
+Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out and close the connection to the Domain Controller Virtual Machine and log back in as “mydomain.com\jane_admin”. This would become the main Administrative Account for the Domain.    
 </p>
 <br />
 
@@ -62,7 +62,7 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 
 </p>
 <p>
-Joining Client-1 to the Domain, login to Client-1 as the original local admin and join it to the domain (computer will restart). Login to the Domain Controller VM and verify that Client-1 VM shows up in Active Directory Users and Computers (ADUC). Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into it. 
+Joining Client-1 Virtual machine to the Domain, login to the Client-1 Virtual Machine as the original local administrator and join it to the domain... (computer will restart). Login to the Domain Controller Virtual Machine and verify that Client-1 Virtual machine shows up in Active Directory Users and Computers. Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into the newly created Orgizational Unit. 
 </p>
 <br />
 
@@ -72,7 +72,7 @@ Joining Client-1 to the Domain, login to Client-1 as the original local admin an
 
 </p>
 <p>
-Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the Client-1 VM as mydomain.com\jane_admin. Right click on the Start Menu and select "System", click “Remote Desktop” on the right of the screen, click "Select users that can remotely access this PC" and allow “Domain Users” access to remote desktop. You can now log into Client-1 VM as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
+Setup Remote Desktop Connection for non-administrative users on Client-1 Virtual Machine. Login to the Client-1 Virtual Machine as "mydomain.com\jane_admin". Right click on the "Start" menu and select "System", click “Remote Desktop” on the right of the screen, click on "Select users that can remotely access this PC" and allow “Domain Users” access to Remote Desktop Connection. You can now log into Client-1 Virtual Machine as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
 
 </p>
 <br />
@@ -83,7 +83,7 @@ Setup Remote Desktop for non-administrative users on Client-1 VM. Login to the C
 
 </p>
 <p>
-Creating additional Non-Administrative users and login to client-1 with one of the new users. Login to the DC-1 VM as a Domain Admin. Open PowerShell_ise as an administrator. Create a new File and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers (ADUC) and observe the accounts under "_EMPLOYEES". We now have the ability to login to the Client-1 VM as one of the new Non-Administrative accounts. Every Non-Administrative account has the same password.   
+Creating additional non-administrative users and login to Client-1 Virtual Machine as one of the new users. Login to the DC-1 Virtual Machine as a Domain Admin. Open PowerShell_ise as an administrator. Create a new file and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers and observe the accounts under "_EMPLOYEES". We now have the ability to login to the Client-1 Virtual Machine as one of the new aon-administrative accounts. Every non-administrative account was created with the same password.   
 </p>
 <br />
 
@@ -93,6 +93,6 @@ Creating additional Non-Administrative users and login to client-1 with one of t
 
 </p>
 <p>
-Under the "_EMPOLYEES" tab, we can now see the newly created Non-Administrative accounts. This concludes the Deployment of Active Directory in the Cloud (Microsoft Azure)   
+Under the "_EMPOLYEES" tab, we can now see the newly created non-administrative accounts. This concludes the Deployment of Microsoft Active Directory in the Cloud with Microsoft Azure!   
 </p>
 <br />
