@@ -3,8 +3,8 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-Microsoft Active Directory Deployed in the Cloud (Microsoft Azure).
-This tutorial outlines the implementation of Active Directory within Azure Virtual Machines.<br />
+Microsoft Active Directory Deployed in the Cloud with Microsoft Azure.
+This tutorial outlines the implementation of Microsoft Active Directory with Microsoft Azure Virtual Machines.<br />
 
 
 <h2>Video Demonstration</h2>
