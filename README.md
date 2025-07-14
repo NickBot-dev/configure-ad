@@ -42,7 +42,7 @@ This tutorial outlines the implementation of Microsoft Active Directory with Mic
   
 </p>
 <p>
-Installing Active Directory, from the Domain Controller Virtual Machine, also known as DC-1. Open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. In the third screenshot, select "Rename this PC (advanced)", Promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart the DC-1 Virtual Machine and then log back in as username: "mydomain.com\labuser".
+Installing Active Directory. From the Domain Controller (DC-1) virtual machine, open Server Manager and click "Add Roles and Features", install Active Directory Domain Services. In the third screenshot, we select "Rename this PC (advanced)", Promote as a Domain Controller: Setup a new forest as "mydomain.com" (can be anything). Restart the Domain Controller virtual machine and log back in as username: "mydomain.com\labuser".
 </p>
 <br />
 
@@ -52,7 +52,7 @@ Installing Active Directory, from the Domain Controller Virtual Machine, also kn
 
 </p>
 <p>
-Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out and close the connection to the Domain Controller Virtual Machine and log back in as “mydomain.com\jane_admin”. This would become the main Administrative Account for the Domain.    
+Creating a Domain Admin user within the Domain, In Active Directory Users and Computers (ADUC), create two Organizational Units (OU) called “_EMPLOYEES” and “_ADMINS” by right clicking on my domain, hover over "New", and click "orgizational unit". Create a new employee named “Jane Doe”, for example, with the username of “jane_admin”. Add jane_admin to the “Domain Admins” Security Group. Finally, log out and close the connection to the Domain Controller virtual machine and log back in as “mydomain.com\jane_admin”. This would become the main Administrative account for the Domain.    
 </p>
 <br />
 
@@ -62,7 +62,7 @@ Creating a Domain Admin user within the Domain, In Active Directory Users and Co
 
 </p>
 <p>
-Joining Client-1 Virtual machine to the Domain, login to the Client-1 Virtual Machine as the original local administrator and join it to the domain... (computer will restart). Login to the Domain Controller Virtual Machine and verify that Client-1 Virtual machine shows up in Active Directory Users and Computers. Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into the newly created Orgizational Unit. 
+Joining Client-1 Virtual machine to the Domain. Login to the Client-1 virtual machine as the original local administrator and join it to the domain... (computer will restart). Login to the Domain Controller virtual machine and verify that Client-1 virtual machine shows up in Active Directory Users and Computers. Create a new Orgizational Unit (OU) named “_CLIENTS” and drag Client-1 into the newly created Orgizational Unit. 
 </p>
 <br />
 
@@ -72,7 +72,7 @@ Joining Client-1 Virtual machine to the Domain, login to the Client-1 Virtual Ma
 
 </p>
 <p>
-Setup Remote Desktop Connection for non-administrative users on Client-1 Virtual Machine. Login to the Client-1 Virtual Machine as "mydomain.com\jane_admin". Right click on the "Start" menu and select "System", click “Remote Desktop” on the right of the screen, click on "Select users that can remotely access this PC" and allow “Domain Users” access to Remote Desktop Connection. You can now log into Client-1 Virtual Machine as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
+Setup Remote Desktop Connection for non-administrative users on Client-1 virtual machine. Login to the Client-1 virtual machine as "mydomain.com\jane_admin". Right click on the "Start" menu and select "System", click “Remote Desktop” on the right of the screen, click on "Select users that can remotely access this PC" and allow “Domain Users” access to Remote Desktop Connection. You can now log into Client-1 virtual machine as a non-administrative user. At a real job, you’d want to do this by creating a Group Policy that allows you to change many systems at once.
 
 </p>
 <br />
@@ -83,7 +83,7 @@ Setup Remote Desktop Connection for non-administrative users on Client-1 Virtual
 
 </p>
 <p>
-Creating additional non-administrative users and login to Client-1 Virtual Machine as one of the new users. Login to the DC-1 Virtual Machine as a Domain Admin. Open PowerShell_ise as an administrator. Create a new file and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers and observe the accounts under "_EMPLOYEES". We now have the ability to login to the Client-1 Virtual Machine as one of the new aon-administrative accounts. Every non-administrative account was created with the same password.   
+Creating additional non-administrative users and login to Client-1 virtual machine as one of the new users. Login to the Domain Controller virtual machine as a Domain Admin. Open PowerShell_ise as an administrator. Create a new file and paste the contents of the script into it. Run the script and observe the accounts being created. When finished, we open Active Directory Users and Computers and observe the accounts under "_EMPLOYEES". We now have the ability to login to the Client-1 virtual machine as one of the new aon-administrative accounts. Every non-administrative account was created with the same password.   
 </p>
 <br />
 
